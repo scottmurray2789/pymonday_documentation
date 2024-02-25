@@ -1,0 +1,95 @@
+/*
+override table width restrictions
+http://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
+*/
+.wy-nav-content {
+    max-width: 1000px !important;
+}
+
+@media screen and (min-width: 767px) {
+
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      overflow: visible !important;
+   }
+
+   img {
+    box-shadow:0px 0px 25px #666;
+    margin-bottom: 1px;
+  }
+}
+
+/* Wider on bigger displays */
+.md-grid {
+  max-width: 71rem !important;
+}
+
+table, td, th {
+   border: 1px solid black;
+   width: 1000px;
+ }
+
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin: -10px; /* Adjust as needed */
+ }
+ 
+ .column {
+   flex: 50%; /* Adjust as needed for the number of columns */
+   padding: 10px; /* Adjust as needed */
+ }
+
+ .card {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+ }
+
+ .card:hover {
+   transform: translateY(-5px);
+ }
+ 
+ .card-header {
+   background-color: #505258; /* Color for the header/menu section */
+   color: rgb(253, 253, 253);
+   padding: 10px 20px;
+ }
+
+ .card-header h2 {
+   margin: 0;
+   font-size: 24px; /* Adjust font size */
+ }
+ 
+ .card-content {
+   background-color: white; /* Color for the content section */
+   padding: 10px;
+   flex-grow: 1;
+ }
+ 
+ .card-button {
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 20px;
+   cursor: pointer;
+ }
+ 
+ .card-button:hover {
+   background-color: #0056b3;
+ }
+ 

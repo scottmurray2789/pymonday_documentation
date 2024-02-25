@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Groups &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Groups</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#create_group">create_group()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#delete_group">delete_group()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#move_item_to_group">move_item_to_group()</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.104%20Teams/">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.106%20Folders/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="groups">Groups</h1>
+<hr />
+<h3 id="create_group">create_group()</h3>
+<pre><code>create_group(board_id=Integer, group_name=String)
+</code></pre>
+<p><strong>Description:</strong>
+Create a new group on a board at the top position.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board. Single Integer value.</p>
+<p><strong>group_name:</strong> Name of the new group to be created.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+UUID of the newly created group.</p>
+<p><strong>Example:</strong></p>
+<p><code>new_group = monday.create_group(board_id=12345678, group_name="New Group")</code></p>
+<hr />
+<h3 id="delete_group">delete_group()</h3>
+<pre><code>delete_group(board_id=Integer, group_name=String)
+</code></pre>
+<p><strong>Description:</strong>
+Delete a group from a board.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board. Single Integer value.</p>
+<p><strong>group_name:</strong> Name of the new group to delete</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.delete_group(board_id=12345678, group_name="New Group"))</code></p>
+<hr />
+<h3 id="move_item_to_group">move_item_to_group()</h3>
+<pre><code>move_item_to_group(item_id=Integer, group_id=String)
+</code></pre>
+<p><strong>Description:</strong>
+Move an item from one group in a board to another.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item to move.</p>
+<p><strong>group_id:</strong> UUID of the group to move the item to.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.move_item_to_group(item_id=12345678, group_id="group_id"))</code></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.104%20Teams/" title="Teams"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.106%20Folders/" title="Folders"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

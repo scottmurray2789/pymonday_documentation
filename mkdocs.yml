@@ -1,0 +1,15 @@
+site_name: Pymonday
+
+theme: ivory
+
+extra_css:
+  - theme_overrides.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+
+

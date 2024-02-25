@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Items &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Items</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#get_item_ids_from_group">get_item_ids_from_group()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_items_page_from_group">get_items_page_from_group()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_item_ids_between_dates">get_item_ids_between_dates()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_item_ids_between_date">get_item_ids_between_date()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_item_columns">get_item_columns()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_item">create_item()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_item_with_column_values">create_item_with_column_values()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#delete_item">delete_item()</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.109%20Files/">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.111%20Columns/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="items">Items</h1>
+<hr />
+<h3 id="get_item_ids_from_group">get_item_ids_from_group()</h3>
+<pre><code>get_item_ids_from_group(board_id=Integer, group_id=String)
+</code></pre>
+<p><strong>Description:</strong>
+Get all item IDs from a specific group on a board. Cursor Based Pagination Required. Records limited to 500 per call.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+<p><strong>group_id:</strong> UUID of the group.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of Dictionaries containing item Data.</p>
+<p><strong>Example:</strong></p>
+<p><code>item_ids = monday.get_item_ids_from_group(board_id=123456789, group_id="group_id")</code></p>
+<hr />
+<h3 id="get_items_page_from_group">get_items_page_from_group()</h3>
+<pre><code>get_items_page_from_group(board_id=Integer, group_id=String, columns=List)
+</code></pre>
+<p><strong>Description:</strong>
+Get all items from a specific group on a board along with column values.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+<p><strong>group_id:</strong> UUID of the group.</p>
+<p><strong>columns:</strong> List of column IDs to get the values for.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of Dictionaries containing item &amp; column data.</p>
+<p><strong>Example:</strong></p>
+<p><code>item_ids = monday.get_items_page_from_group(board_id=123456789, group_id="group_id", columns=["column1", "column2", "column3"])</code></p>
+<hr />
+<h3 id="get_item_ids_between_dates">get_item_ids_between_dates()</h3>
+<pre><code>get_item_ids_between_dates(board_id=Integer, group_id=String, column_id=String, start_date=String, end_date=String)
+</code></pre>
+<p><strong>Description:</strong>
+Get Item IDs between a specified date range. Supports Timeline columns and start dates.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+<p><strong>group_id:</strong> UUID of the group.</p>
+<p><strong>column_id:</strong> UUID of the timeline column to filter the dates on.</p>
+<p><strong>start_date:</strong> Start of date range.</p>
+<p><strong>end_date:</strong> End of date range.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array containing Item IDs</p>
+<p><strong>Example:</strong></p>
+<p><code>item_ids = monday.get_item_ids_between_dates(board_id=123456789, group_id="group_id", column_id="column_id", start_date=YYYY-MM-DD, end_date=YYYY-MM-DD)</code></p>
+<hr />
+<h3 id="get_item_ids_between_date">get_item_ids_between_date()</h3>
+<pre><code>get_item_ids_between_date(board_id=Integer, group_id=String, column_id=String, start_date=String, end_date=String)
+</code></pre>
+<p><strong>Description:</strong>
+Get Item IDs between a specified date range. Supports Date columns.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+<p><strong>group_id:</strong> UUID of the group.</p>
+<p><strong>column_id:</strong> UUID of the timeline column to filter the dates on.</p>
+<p><strong>start_date:</strong> Start of date range.</p>
+<p><strong>end_date:</strong> End of date range.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array containing Item IDs</p>
+<p><strong>Example:</strong></p>
+<p><code>item_ids = monday.get_item_ids_between_date(board_id=123456789, group_id="group_id", column_id="column_id", start_date=YYYY-MM-DD, end_date=YYYY-MM-DD)</code></p>
+<hr />
+<h3 id="get_item_columns">get_item_columns()</h3>
+<pre><code>get_item_columns(item_list=List, column_id_list=List)
+</code></pre>
+<p><strong>Description:</strong>
+Asynchronous API call to get column values of items on a board.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id_list:</strong> Array of item IDs</p>
+<p><strong>column_id_list:</strong> Array of column IDs</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of dictionaries containing item data.</p>
+<p><strong>Example:</strong></p>
+<p><code>item_data = monday.get_item_columns(item_id_list=[123456789, 987654321, 111222333], ["column1", "column2", "column3"])</code></p>
+<hr />
+<h3 id="create_item">create_item()</h3>
+<pre><code>create_item(board=Integer, group=String, item_name=String)
+</code></pre>
+<p><strong>Description:</strong>
+Create a new item within a group on a specific board.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board:</strong> UUID of the board to create the item on.</p>
+<p><strong>group:</strong> UUID of the group to create the item in.</p>
+<p><strong>item_name:</strong> Name of the new item to be created.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+UUID of the newly created item. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<p><code>new_item = monday.create_item(board=123456789, group="group_id", item_name="Item Name")</code></p>
+<hr />
+<h3 id="create_item_with_column_values">create_item_with_column_values()</h3>
+<pre><code>create_item_with_column_values(board=Integer, group=String, item_name=String, column_dict=Dictionary)
+</code></pre>
+<p><strong>Description:</strong>
+Create a New item within a group on a board. Populate specific column values on item creation.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board:</strong> UUID of the board to create the item on.</p>
+<p><strong>group:</strong> UUID of the group to create the item in.</p>
+<p><strong>item_name:</strong> Name of the new item to be created.</p>
+<p><strong>column_dict:</strong> Name of the new item to be created. Dictionary of column values to set when item is created</p>
+</blockquote>
+<p>For full details on column values, see the column dictionary format section
+<a href="../1.111%20Columns/#column-dictionary-format-">here</a></p>
+<p><strong>Returns:</strong>
+UUID of the newly created item. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>    columns = {
+        &quot;text&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;Some Text&quot;]},
+        &quot;text1&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;More Text&quot;]},
+        &quot;status&quot;: {&quot;type&quot;: &quot;status&quot;, &quot;values&quot;: [&quot;Status Label&quot;]},
+        &quot;timeline3&quot;: {&quot;type&quot;: &quot;timeline&quot;, &quot;values&quot;: [&quot;2024-01-01&quot;, &quot;2024-01-02&quot;]},
+        &quot;connect_boards_1&quot;: {&quot;type&quot;: &quot;connect_boards&quot;, &quot;values&quot;: [[123456789, 987654321]]}
+    }
+    new_item = monday.create_item_with_column_values(board=123456789, group=&quot;group_id&quot;, item_name=&quot;Item Name&quot;, column_dict=columns)
+</code></pre></div>
+<hr />
+<h3 id="delete_item">delete_item()</h3>
+<pre><code>delete_item(item_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Delete an item from the platform.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item to delete.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.delete_item(item_id=123456789)</code></p>
+<hr /></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.109%20Files/" title="Files"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.111%20Columns/" title="Columns"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

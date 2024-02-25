@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Subitems &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Subitems</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#get_subitems">get_subitems()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_subitem_info">get_subitem_info()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_subitem">create_subitem()</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.111%20Columns/">&laquo; Previous</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="subitems">Subitems</h1>
+<hr />
+<h3 id="get_subitems">get_subitems()</h3>
+<pre><code>get_subitems(item_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get the UUIDs of the subitems of an item</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the parent Item.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of subitem IDs. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>    monday.get_subitems(item_id=123456789)
+</code></pre></div>
+<hr />
+<h3 id="get_subitem_info">get_subitem_info()</h3>
+<pre><code>get_subitem_info(sub_item_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get the Board ID and Parent ID from a Subitem.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>sub_item_id:</strong> UUID of the subitem.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Dictionary containing board &amp; parent ID information.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>    monday.get_subitem_info(sub_item_id=123456789)
+</code></pre></div>
+<hr />
+<h3 id="create_subitem">create_subitem()</h3>
+<pre><code>create_subitems(parent_id=Integer, item_name=String, column_dictionary=Dictionary)
+</code></pre>
+<p><strong>Description:</strong>
+Create a new Subitem under a Parent Item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>parent_id:</strong> UUID of the item to create the subitem under.</p>
+<p><strong>item_name:</strong> Name of the new Subitem.</p>
+<p><strong>column_dictionary:</strong> Dictionary containing column IDs, column types and values.</p>
+</blockquote>
+<p>For full details on column values, see the column dictionary format section
+<a href="../1.111%20Columns/#column-dictionary-format-">here</a></p>
+<p><strong>Returns:</strong>
+UUID of the new subitem.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>    columns = {
+        &quot;text&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;Some Text&quot;]},
+        &quot;text1&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;More Text&quot;]},
+        &quot;status&quot;: {&quot;type&quot;: &quot;status&quot;, &quot;values&quot;: [&quot;Status Label&quot;]},
+        &quot;timeline3&quot;: {&quot;type&quot;: &quot;timeline&quot;, &quot;values&quot;: [&quot;2024-01-01&quot;, &quot;2024-01-02&quot;]},
+        &quot;connect_boards_1&quot;: {&quot;type&quot;: &quot;connect_boards&quot;, &quot;values&quot;: [[123456789, 987654321]]}
+    }
+    new_sub_item = monday.create_item_with_column_values(parent_id=123456789, item_name=&quot;Item Name&quot;, column_dictionary=columns)
+</code></pre></div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.111%20Columns/" title="Columns"><span>Previous</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

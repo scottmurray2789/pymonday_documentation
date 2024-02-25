@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Updates &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Updates</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#get_item_updates">get_item_updates()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_update">create_update()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_reply">create_reply()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#delete_update">delete_update()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#clear_updates">clear_updates()</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.107%20Notifications/">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.109%20Files/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="updates">Updates</h1>
+<hr />
+<h3 id="get_item_updates">get_item_updates()</h3>
+<pre><code>get_item_updates(item_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get the updates from an item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of Dictionaries containing the update data. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<p><code>updates = monday.get_item_updates(item_id=123456789)</code></p>
+<hr />
+<h3 id="create_update">create_update()</h3>
+<pre><code>create_update(item_id=Integer, update_text=String)
+</code></pre>
+<p><strong>Description:</strong>
+Create an update on an item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item to leave the update on.</p>
+<p><strong>update_text:</strong> Body of the update.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.create_updates(item_id=123456789, update_text="Update Text"))</code></p>
+<hr />
+<h3 id="create_reply">create_reply()</h3>
+<pre><code>create_reply(item_id=Integer, update_text=String, parent_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Reply to an update on an item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item to leave the update on.</p>
+<p><strong>update_text:</strong> Body of the update.</p>
+<p><strong>parent_id:</strong> UUID of the update to leave a reply on.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+UUID of the Reply. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.create_reply(item_id=123456789, update_text="Update Text", parent_id=987654321))</code></p>
+<hr />
+<h3 id="delete_update">delete_update()</h3>
+<pre><code>delete_update(update_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Delete an update on an item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>update_id:</strong> UUID of the update.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.delete_update(update_id=123456789))</code></p>
+<hr />
+<h3 id="clear_updates">clear_updates()</h3>
+<pre><code>clear_updatesitem_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Clear all updates from an item.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>item_id:</strong> UUID of the item.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.clear_updates(item_id=123456789))</code></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.107%20Notifications/" title="Notifications"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.109%20Files/" title="Files"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

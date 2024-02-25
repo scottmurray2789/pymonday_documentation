@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Boards &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Boards</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#get_all_boards">get_all_boards()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_board_info">get_board_info()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#get_board_groups">get_board_groups()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_board">create_board()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#delete_board">delete_board()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#update_board_description">update_board_description()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#archive_board">archive_board()</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="..">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.102%20Users/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="boards">Boards</h1>
+<hr />
+<h3 id="get_all_boards">get_all_boards()</h3>
+<pre><code>get_all_boards()
+</code></pre>
+<p><strong>Description:</strong>
+Get all boards from the platform.</p>
+<p><strong>Arguments:</strong>
+None</p>
+<p><strong>Returns:</strong>
+Dictionary containing the Board UUID and its name.</p>
+<p><strong>Example:</strong></p>
+<p><code>boards = monday.get_all_boards()</code></p>
+<hr />
+<h3 id="get_board_info">get_board_info()</h3>
+<pre><code>get_board_info(board_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get the following information from a board: Name, ID, State, Permissions, Type, Workspace.</p>
+<p><strong>Arguments:</strong> </p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Dictionary containing above information.</p>
+<p><strong>Example:</strong></p>
+<p><code>board_info = monday.get_board_info(board_id=123456789)</code></p>
+<hr />
+<h3 id="get_board_groups">get_board_groups()</h3>
+<pre><code>get_board_groups(board_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get all groups of a specific board.</p>
+<p><strong>Arguments:</strong> </p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Dictionary containing Group IDs and Group Names.</p>
+<p><strong>Example:</strong></p>
+<p><code>groups = monday.get_board_groups(board_id=123456789)</code></p>
+<hr />
+<h3 id="create_board">create_board()</h3>
+<pre><code>create_board(board_name=String, board_type=String, workspace_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Create a new board within a specific workspace.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_name:</strong> Required. The Name of the new board</p>
+<p><strong>board_type:</strong> Required. Board Visibility. Options: public, private, share</p>
+<p><strong>workspace_id:</strong> Required. UUID of the workspace to create the board in</p>
+</blockquote>
+<p><strong>Returns:</strong>
+UUID of the newly created board.</p>
+<p><strong>Example:</strong></p>
+<p><code>new_board = monday.create_board(board_name="New Board", board_type="private", workspace_id=12345)</code></p>
+<hr />
+<h3 id="delete_board">delete_board()</h3>
+<pre><code>delete_board(board_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Delete a board.</p>
+<p><strong>Arguments:</strong> </p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+ID of the board which was deleted.</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.delete_board(board_id=12345678))</code></p>
+<hr />
+<h3 id="update_board_description">update_board_description()</h3>
+<pre><code>update_board_description(board_id=Integer, description=String)
+</code></pre>
+<p><strong>Description:</strong>
+Update the description of a specific board.</p>
+<p><strong>Arguments:</strong> </p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+<p><strong>description:</strong> Text String to be used as the board description.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>monday.update_board_description(board_id=12345678, description="New Description")</code></p>
+<hr />
+<h3 id="archive_board">archive_board()</h3>
+<pre><code>archive_board(board_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Archive a board.</p>
+<p><strong>Arguments:</strong> </p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>monday.archive_board(board_id=12345678)</code></p>
+<hr /></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href=".." title="Overview"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.102%20Users/" title="Users"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

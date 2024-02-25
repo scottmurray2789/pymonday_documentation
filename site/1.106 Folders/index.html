@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Folders &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Folders</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#get_folders">get_folders()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#create_folder">create_folder()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#update_folder">update_folder()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#delete_folder">delete_folder()</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.111%20Columns/">Columns</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.105%20Groups/">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.107%20Notifications/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="folders">Folders</h1>
+<hr />
+<h3 id="get_folders">get_folders()</h3>
+<pre><code>get_folders(workspace_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Get all folders in a workspace.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>workspace_id:</strong> UUID of the workspace.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+Array of Dictionaries containing folder data. Return None on API call failure.</p>
+<p><strong>Example:</strong></p>
+<p><code>folders = monday.get_folders(workspace_id=12345)</code></p>
+<hr />
+<h3 id="create_folder">create_folder()</h3>
+<pre><code>create_folder(name=String, workspace_id=Integer, **kwargs)
+</code></pre>
+<p><strong>Description:</strong>
+ Create a folder in a workspace. Pass keyword arguments to configure folder attributes. </p>
+<p>**Keywords must be passed exactly as defined below. Folder colors can be found here:</p>
+<p>https://asset.cloudinary.com/monday-platform-dev/3e39afb2309b512f4f53cc9173554d48</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>name:</strong> The Folders name (Required)</p>
+<p><strong>workspace_id:</strong> The unique identifier of the workspace to create the new folder in (Required)</p>
+<p><strong>kwargs:</strong> </p>
+<blockquote>
+<p><strong>color</strong>: The folders color.</p>
+<p><strong>parent_folder_id</strong>: The ID of the folder you want to nest the new one under. Nesting is limited to 1 tier.</p>
+</blockquote>
+</blockquote>
+<p><strong>Returns:</strong>
+UUID of the newly created folder.</p>
+<p><strong>Example:</strong></p>
+<p><code>new_folder = monday.create_folder(name="Folder A", workspace_id=12345, color="BRIGHT GREEN", parent_folder_id=12345)</code></p>
+<hr />
+<h3 id="update_folder">update_folder()</h3>
+<pre><code>update_folder(folder_id=Integer, **kwargs)
+</code></pre>
+<p><strong>Description:</strong>
+ Update a folder in a workspace. Pass keyword arguments to configure folder attributes. </p>
+<p>**Keywords must be passed exactly as defined below. Folder colors can be found here:</p>
+<p>https://asset.cloudinary.com/monday-platform-dev/3e39afb2309b512f4f53cc9173554d48</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>folder_id:</strong> The Folders UUID (Required)</p>
+<p><strong>kwargs:</strong> </p>
+<blockquote>
+<p><strong>name</strong>: New folder name.</p>
+<p><strong>color</strong>: The folders color.</p>
+<p><strong>parent_folder_id</strong>: The ID of the folder you want to nest the new one under. Nesting is limited to 1 tier.</p>
+</blockquote>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.update_folder(folder_id=12345, name="New Folder Name", color="DONE GREEN", parent_folder_id=12345))</code></p>
+<hr />
+<h2 id="delete_folder">delete_folder()</h2>
+<pre><code>delete_folder(folder_id=Integer)
+</code></pre>
+<p><strong>Description:</strong>
+Delete a folder from a workspace</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>folder_id:</strong> UUID of the folder to delete.</p>
+</blockquote>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<p><code>print(monday.delete_folder(folder_id=12345))</code></p>
+<hr /></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.105%20Groups/" title="Groups"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.107%20Notifications/" title="Notifications"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>

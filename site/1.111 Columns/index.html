@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Columns &mdash; Pymonday</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../theme_overrides.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> Pymonday</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">Overview</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.101%20Boards/">Boards</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.102%20Users/">Users</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.103%20Workspaces/">Workspaces</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.104%20Teams/">Teams</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.105%20Groups/">Groups</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.106%20Folders/">Folders</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.107%20Notifications/">Notifications</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.108%20Updates/">Updates</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.109%20Files/">Files</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.110%20Items/">Items</a></li>
+                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Columns</a>
+<ul class="subnav">
+<li class="toctree-l2"><a class="nav-item toc" href="#change_column_values">change_column_values()</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#setting-column-values-column-dictionary-format">Setting Column Values - Column Dictionary Format:</a></li>
+<li class="toctree-l2"><a class="nav-item toc" href="#reading-column-values">Reading Column Values</a></li>
+</ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../1.112%20Subitems/">Subitems</a></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../1.110%20Items/">&laquo; Previous</a></div>
+    <div class="next"><a href="../1.112%20Subitems/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> Pymonday</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="columns">Columns</h1>
+<hr />
+<h3 id="change_column_values">change_column_values()</h3>
+<pre><code>change_column_values(board_id=Integer, item_id=Integer, column_dict=Dictionary)
+</code></pre>
+<p><strong>Description:</strong>
+Change the column values of an item. Multiple column values can be changed in a single query.</p>
+<p><strong>Arguments:</strong></p>
+<blockquote>
+<p><strong>board_id:</strong> UUID of the board to create the item on.</p>
+<p><strong>item_id:</strong> UUID of the Item the column values should be changed on.</p>
+<p><strong>column_dict:</strong> Name of the new item to be created. Dictionary of column values to set when item is created</p>
+</blockquote>
+<p>For full details on column values, see the create_item_with_column_values() section 
+<a href="../1.110%20Items/#createitemwithcolumnvalues--">here</a></p>
+<p><strong>Returns:</strong>
+None</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>columns = {
+        &quot;text&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;Some Text&quot;]},
+        &quot;text1&quot;: {&quot;type&quot;: &quot;text&quot;, &quot;values&quot;: [&quot;More Text&quot;]},
+        &quot;status&quot;: {&quot;type&quot;: &quot;status&quot;, &quot;values&quot;: [&quot;Status Label&quot;]},
+        &quot;timeline3&quot;: {&quot;type&quot;: &quot;timeline&quot;, &quot;values&quot;: [&quot;2024-01-01&quot;, &quot;2024-01-02&quot;]},
+        &quot;connect_boards_1&quot;: {&quot;type&quot;: &quot;connect_boards&quot;, &quot;values&quot;: [[123456789, 987654321]]}
+    }
+    print(monday.create_item_with_column_values(board_id=123456789, item_id=&quot;group_id&quot;, column_dict=columns))
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="setting-column-values-column-dictionary-format">Setting Column Values - Column Dictionary Format:</h3>
+<p>columns = {"column_id": {"type": "column_type", "values": ["value1", "value2", "etc"]</p>
+<p>Arguments for each column should be passed in the order defined in the official API documentation within the values list. The correct
+number of arguments must be specified as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all column types are currently supported by PyMonday</p>
+</div>
+<p>Below is a list of all column types currently supported and shows the number &amp; type of arguments required. 
+The first argument in the line is always the column_id:</p>
+<pre><code>'text': One Argument. Text String
+'checkbox': One Argument. Boolean. True or False
+'timeline': Two Arguments. From Date &amp; To Date. Must be Strings formatted as YYYY-MM-DD
+'connect_boards': One Argument. List containing item IDs. Must be integers.
+'country': Two Arguments. 2 digit country code &amp; country name. Both Strings.
+'date': One Argument. Date. Must be String formatted as YYYY-MM-DD
+'date_time': Two Arguments. Date &amp; Time. Must be Strings formatted as YYYY-MM-DD &amp; HH:MM:SS
+'dependency': One Argument. List containing item IDs. Must be integers.
+'dropdown': One Argument. Text String
+'email': Two Arguments. Email &amp; Display Text. Both Strings.
+'hour': Two Arguments. Hour &amp; Minutes. Both Integers. No Leading Zeros.
+'link': Two Arguments. URL &amp; Display Text. Both Strings.
+'location': Three Arguments. Latitude, Longitude &amp; Address. All Strings.
+'long_text': One Argument. Text String
+'name': One Argument. Text String
+'numbers': One Argument. Integer
+'people': Two Arguments. ID of Person/Team &amp; Identifier. ID Must be an Integer. Identifier should be a String, either "person" or "team"
+'status': One Argument. Text String 
+'time_zone': One Argument. Text String. Must be a valid timezone i.e. "Europe/London"
+</code></pre>
+<p>For example, the timeline column type requires 2 arguments; the <em>from</em> and <em>to</em> dates. Therefore the column dictionary
+to be passed to the function would be:</p>
+<pre><code>columns = {"timeline_1": {"type": "timeline", "values": ["2024-01-01", "2024-01-02"]}}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple column values can be passed simultaneously</p>
+</div>
+<hr />
+<h3 id="reading-column-values">Reading Column Values</h3>
+<p>The following data types are retrieved for each column:</p>
+<ul>
+<li>text</li>
+<li>value</li>
+<li>column (id &amp; title)</li>
+<li>BoardRelationValue (display_value &amp; linked_items_id)</li>
+<li>MirrorValue (display_value)</li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<p>If you use the <strong>get_items_page_from_groups()</strong> method, you will receive the data in the following format:</p>
+<pre><code>"items": [
+  {
+    "id": "123456789",
+    "name": "Item 1",
+    "column_values": [
+      {
+        "column": {
+          "id": "mirror_1",
+          "title": "Mirror Column"
+        },
+        "value": null,
+        "text": null,
+        "display_value": "Value 1"
+      }
+    ]
+  },
+  {
+    "id": "987654321",
+    "name": "Item 2",
+    "column_values": [
+      {
+        "column": {
+          "id": "mirror_1",
+          "title": "Mirror Column"
+        },
+        "value": null,
+        "text": null,
+        "display_value": "Value 2"
+      }
+    ]
+  }
+]
+</code></pre>
+<p>You can access the column data by navigating through the nested data structures:</p>
+<pre><code>text = item[0]['column_values'][0]['display_value']
+print(text)
+&gt;&gt;&gt; Value 1
+</code></pre>
+<hr />
+<p><strong>Example 2:</strong></p>
+<p>In this example we've added a connect column to the data received:</p>
+<pre><code> "items": [
+  {
+    "id": "123456789",
+    "name": "Item 1",
+    "column_values": [
+      {
+        "column": {
+          "id": "connect_boards",
+          "title": "Connect Column"
+        },
+        "value": "{\"changed_at\":\"2024-02-06T21:48:54.709Z\",\"linkedPulseIds\":[{\"linkedPulseId\":111111111}]}",
+        "text": null,
+        "display_value": "Connected Item 1",
+        "linked_item_ids": [
+          "111111111"
+        ]
+      },
+      {
+        "column": {
+          "id": "mirror_1",
+          "title": "Mirror Column"
+        },
+        "value": null,
+        "text": null,
+        "display_value": "Value 1"
+      }
+    ]
+  },
+  {
+    "id": "987654321",
+    "name": "Item 2",
+    "column_values": [
+      {
+        "column": {
+          "id": "connect_boards",
+          "title": "Connect Column"
+        },
+        "value": "{\"changed_at\":\"2024-02-06T21:48:54.709Z\",\"linkedPulseIds\":[{\"linkedPulseId\":222222222}]}",
+        "text": null,
+        "display_value": "Connected Item 2",
+        "linked_item_ids": [
+          "222222222"
+        ]
+      },
+      {
+        "column": {
+          "id": "mirror_1",
+          "title": "Mirror Column"
+        },
+        "value": null,
+        "text": null,
+        "display_value": "Value 2"
+      }
+    ]
+  }
+]
+</code></pre>
+<p>To access the ID(s) of the item(s) linked to <em>Item 2</em> on the connect column, we can use:</p>
+<pre><code>linkedIDs = item[1]['column_values'][0]['linked_item_ids']
+print(linkedIDs)
+&gt;&gt;&gt; ['222222222']
+</code></pre></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../1.110%20Items/" title="Items"><span>Previous</span></a></div>
+        <div class="next"><a href="../1.112%20Subitems/" title="Subitems"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>
