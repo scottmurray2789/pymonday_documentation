@@ -16,7 +16,8 @@ pip install pymonday
 
 ### API Authentication
 
-This library requires you have a valid monday.com API key stored as a local system environment variable. 
+You must pass your monday.com API key to the MondayAPIClient object to authenticate API calls.
+
 Review the Official API Documentation for instructions on obtaining an API Key. 
 
 ### Instantiate Client Object
@@ -28,7 +29,7 @@ from pymonday import MondayAPIClient
 
 An instance of the API Client Object can then be created:
 ```python
-monday = MondayAPIClient()
+monday = MondayAPIClient(api_key="API_KEY")
 ```
 
 The object can then be called and its methods accessed in order to interact with the monday.com API:
