@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Subitems - Pymonday</title>
+    <title>Users - Pymonday</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Subitems";
-        var mkdocs_page_input_path = "1.112 Subitems.md";
+        var mkdocs_page_name = "Users";
+        var mkdocs_page_input_path = "1.116 Users.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -71,19 +71,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Subitems</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitems">get_subitems()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_names">get_subitem_names()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_info">get_subitem_info()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#create_subitem">create_subitem()</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
                   </li>
@@ -91,7 +79,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Users</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_all_users">get_all_users()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_user_info">get_user_info()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add_user_to_board">add_user_to_board()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remove_user_from_board">remove_user_from_board()</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.117%20Workspaces/">Workspaces</a>
                   </li>
@@ -111,7 +111,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Reference</li>
-      <li class="breadcrumb-item active">Subitems</li>
+      <li class="breadcrumb-item active">Users</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -120,7 +120,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="subitem-methods">Subitem Methods</h1>
+                <h1 id="users-methods">Users Methods</h1>
 <table>
 <thead>
 <tr>
@@ -131,100 +131,90 @@
 </thead>
 <tbody>
 <tr>
-<td><code>get_subitems(item_id)</code></td>
+<td><code>get_all_users()</code></td>
 <td>Getter</td>
-<td>Retrieves the UUIDs of the subitems of an item.</td>
+<td>Retrieves all users and their details.</td>
 </tr>
 <tr>
-<td><code>get_subitem_names(item_id)</code></td>
+<td><code>get_user_info(user_id)</code></td>
 <td>Getter</td>
-<td>Retrieves the UUIDs and names of an item's subitems.</td>
+<td>Retrieves detailed information for a user.</td>
 </tr>
 <tr>
-<td><code>get_subitem_info(sub_item_id)</code></td>
-<td>Getter</td>
-<td>Retrieves the board ID and parent ID of a subitem.</td>
-</tr>
-<tr>
-<td><code>create_subitem(parent_id, item_name, column_dictionary)</code></td>
+<td><code>add_user_to_board(board_id, user_ids)</code></td>
 <td>Setter</td>
-<td>Creates a new subitem under a parent item.</td>
+<td>Adds one or more users to a board.</td>
+</tr>
+<tr>
+<td><code>remove_user_from_board(board_id, user_ids)</code></td>
+<td>Deleter</td>
+<td>Removes one or more users from a board.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="method-details">Method Details</h2>
-<h2 id="get_subitems">get_subitems()</h2>
-<p><code>get_subitems(item_id)</code></p>
+<h2 id="get_all_users">get_all_users()</h2>
+<p><code>get_all_users()</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs of the subitems of an item.</p>
-<p><strong>Arguments:</strong></p>
-<ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
-</ul>
+Retrieves all users and their details.</p>
 <p><strong>Returns:</strong>
-Array of subitem IDs. <code>None</code> or error message on API call failure.</p>
+A dictionary of user IDs mapped to user names. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitems</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitems</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">users</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_all_users</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_names">get_subitem_names()</h2>
-<p><code>get_subitem_names(item_id)</code></p>
+<h2 id="get_user_info">get_user_info()</h2>
+<p><code>get_user_info(user_id)</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs and names of an item's subitems.</p>
+Retrieves detailed information for a user.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
+<li><strong>user_id</strong> <em>(int)</em>: The ID of the user to retrieve information for.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary of subitem IDs and names. <code>None</code> or error message on API call failure.</p>
+A dictionary containing user details including name, email, phone, country code, creation date, and last activity. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_names</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_names</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">user_info</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user_info</span><span class="p">(</span><span class="mi">1234567</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_info">get_subitem_info()</h2>
-<p><code>get_subitem_info(sub_item_id)</code></p>
+<h2 id="add_user_to_board">add_user_to_board()</h2>
+<p><code>add_user_to_board(board_id, user_ids)</code></p>
 <p><strong>Description:</strong>
-Retrieves the board ID and parent ID of a subitem.</p>
+Adds one or more users to a board.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>sub_item_id</strong> <em>(int)</em>: UUID of the subitem.</li>
+<li><strong>board_id</strong> <em>(int)</em>: The ID of the board.</li>
+<li><strong>user_ids</strong> <em>(list of int)</em>: A list of user IDs to add to the board.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the parent ID and board ID of the subitem. <code>None</code> or error message on API call failure.</p>
+A list containing the IDs of the newly added users. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_info</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_info</span><span class="p">(</span><span class="mi">987654321</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">added_users</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">add_user_to_board</span><span class="p">(</span><span class="n">board_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
+                                             <span class="n">user_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">123456</span><span class="p">,</span> <span class="mi">987654</span><span class="p">])</span>
 </code></pre></div>
 <hr />
-<h2 id="create_subitem">create_subitem()</h2>
-<p><code>create_subitem(parent_id, item_name, column_dictionary)</code></p>
+<h2 id="remove_user_from_board">remove_user_from_board()</h2>
+<p><code>remove_user_from_board(board_id, user_ids)</code></p>
 <p><strong>Description:</strong>
-Creates a new subitem under a parent item.</p>
+Removes one or more users from a board.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>parent_id</strong> <em>(int)</em>: UUID of the item to create the subitem under.</li>
-<li><strong>item_name</strong> <em>(str)</em>: Name of the new subitem.</li>
-<li><strong>column_dictionary</strong> <em>(dict)</em>: Dictionary containing column IDs, column types, and values 
-(refer to <strong>Column Types</strong> in the <strong>Columns</strong> section).</li>
+<li><strong>board_id</strong> <em>(int)</em>: The ID of the board.</li>
+<li><strong>user_ids</strong> <em>(list of int)</em>: A list of user IDs to remove from the board.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the newly created subitem ID and the board ID on which the subitem was created. 
-<code>None</code> or error message on API call failure.</p>
+<code>True</code> if successful. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">col_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;text1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Review documents&quot;</span><span class="p">]},</span>
-    <span class="s2">&quot;status1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pending&quot;</span><span class="p">]}</span>
-<span class="p">}</span>
-<span class="n">new_subitem</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">create_subitem</span><span class="p">(</span><span class="n">parent_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
-                                             <span class="n">item_name</span><span class="o">=</span><span class="s2">&quot;New Subitem&quot;</span><span class="p">,</span> 
-                                             <span class="n">column_dictionary</span><span class="o">=</span><span class="n">col_dict</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">success</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">remove_user_from_board</span><span class="p">(</span><span class="n">board_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
+                                              <span class="n">user_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">123456</span><span class="p">,</span> <span class="mi">987654</span><span class="p">])</span>
 </code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1.111%20Notifications/" class="btn btn-neutral float-left" title="Notifications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../1.113%20Tags/" class="btn btn-neutral float-right" title="Tags">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../1.115%20Updates/" class="btn btn-neutral float-left" title="Updates"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.117%20Workspaces/" class="btn btn-neutral float-right" title="Workspaces">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -247,10 +237,10 @@ Dictionary containing the newly created subitem ID and the board ID on which the
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1.111%20Notifications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../1.115%20Updates/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../1.113%20Tags/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../1.117%20Workspaces/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Columns - Pymonday</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Columns";
+        var mkdocs_page_input_path = "1.104 Columns.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Pymonday
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20Overview/">Methods</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1.101%20Account/">Account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.102%20Activity%20Logs/">Activity Logs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.103%20Boards/">Boards</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Columns</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#column-types">Column Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_column_metadata">get_column_metadata()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#change_column_values">change_column_values()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_column">create_column()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#change_column_title">change_column_title()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clear_column">clear_column()</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.105%20Doc%20Blocks/">Doc Blocks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.106%20Docs/">Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.107%20Files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.108%20Folders/">Folders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.109%20Groups/">Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.110%20Items/">Items</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.114%20Teams/">Teams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.117%20Workspaces/">Workspaces</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Pymonday</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Columns</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="columns-methods">Columns Methods</h1>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Method Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_column_metadata(board_id, column_ids)</code></td>
+<td>Getter</td>
+<td>Retrieves metadata for specific columns on a board.</td>
+</tr>
+<tr>
+<td><code>change_column_values(board_id, item_id, column_dict)</code></td>
+<td>Setter</td>
+<td>Updates multiple column values of an item.</td>
+</tr>
+<tr>
+<td><code>create_column(board_id, title, column_type)</code></td>
+<td>Setter</td>
+<td>Creates a new column in a board.</td>
+</tr>
+<tr>
+<td><code>change_column_title(board_id, column_id, new_title)</code></td>
+<td>Setter</td>
+<td>Updates the title of a column.</td>
+</tr>
+<tr>
+<td><code>clear_column(board_id, item_id, column_id)</code></td>
+<td>Setter</td>
+<td>Clears the value of a column based on its type.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="column-types">Column Types</h2>
+<p>Below is a list of all column types currently supported. The first argument is always the <code>column_id</code>, followed by the required values:</p>
+<blockquote>
+<ul>
+<li>
+<p><strong>text:</strong> One argument. Text string. Example: <code>{ "column_id": { "type": "text", "values": ["Sample text"] } }</code></p>
+</li>
+<li>
+<p><strong>checkbox:</strong> One argument. Boolean (<code>true</code> or <code>false</code>). Example: <code>{ "column_id": { "type": "checkbox", "values": [true] } }</code></p>
+</li>
+<li>
+<p><strong>timeline:</strong> Two arguments. Start date and end date (<code>YYYY-MM-DD</code>). Example: <code>{ "column_id": { "type": "timeline", "values": ["2024-01-01", "2024-12-31"] } }</code></p>
+</li>
+<li>
+<p><strong>connect_boards:</strong> One argument. List of connected item IDs. Example: <code>{ "column_id": { "type": "connect_boards", "values": [[12345678, 87654321]] } }</code></p>
+</li>
+<li>
+<p><strong>country:</strong> Two arguments. Country code and country name. Example: <code>{ "column_id": { "type": "country", "values": ["US", "United States"] } }</code></p>
+</li>
+<li>
+<p><strong>date:</strong> One argument. Date string (<code>YYYY-MM-DD</code>). Example: <code>{ "column_id": { "type": "date", "values": ["2024-06-15"] } }</code></p>
+</li>
+<li>
+<p><strong>date_time:</strong> Two arguments. Date string and time (<code>HH:MM</code>). Example: <code>{ "column_id": { "type": "date_time", "values": ["2024-06-15", "12:30"] } }</code></p>
+</li>
+<li>
+<p><strong>dropdown:</strong> One argument. Single option value. Example: <code>{ "column_id": { "type": "dropdown", "values": ["option1"] } }</code></p>
+</li>
+<li>
+<p><strong>email:</strong> Two arguments. Email and optional text label. Example: <code>{ "column_id": { "type": "email", "values": ["user@example.com", "Work Email"] } }</code></p>
+</li>
+<li>
+<p><strong>hour:</strong> Two arguments. Hour and minute values. Example: <code>{ "column_id": { "type": "hour", "values": [14, 30] } }</code></p>
+</li>
+<li>
+<p><strong>link:</strong> Two arguments. URL and optional display text. Example: <code>{ "column_id": { "type": "link", "values": ["https://example.com", "Click Here"] } }</code></p>
+</li>
+<li>
+<p><strong>location:</strong> Three arguments. Latitude, longitude, and address. Example: <code>{ "column_id": { "type": "location", "values": ["29.9772962", "31.1324955", "Giza Pyramid Complex"] } }</code></p>
+</li>
+<li>
+<p><strong>long_text:</strong> One argument. Long text string. Example: <code>{ "column_id": { "type": "long_text", "values": ["Detailed description of the task."] } }</code></p>
+</li>
+<li>
+<p><strong>numbers:</strong> One argument. Numeric value. Example: <code>{ "column_id": { "type": "numbers", "values": [42] } }</code></p>
+</li>
+<li>
+<p><strong>people:</strong> Two arguments. User/team ID and kind (<code>person</code> or <code>team</code>). Example: <code>{ "column_id": { "type": "people", "values": [123456, "person"] } }</code></p>
+</li>
+<li>
+<p><strong>phone:</strong> Two arguments. Phone number and country code. Example: <code>{ "column_id": { "type": "phone", "values": ["+123456789", "US"] } }</code></p>
+</li>
+<li>
+<p><strong>rating:</strong> One argument. Rating value between 1 and your rating scale (integer). Example: <code>{ "column_id": { "type": "rating", "values": [5] } }</code></p>
+</li>
+<li>
+<p><strong>world_clock:</strong> One argument. Timezone identifier. Example: <code>{ "column_id": { "type": "world_clock", "values": ["America/New_York"] } }</code></p>
+</li>
+<li>
+<p><strong>week:</strong> Two arguments. Week start and end dates. Example: <code>{ "column_id": { "type": "week", "values": ["2019-06-10", "2019-06-16"] } }</code></p>
+</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="method-details">Method Details</h2>
+<h2 id="get_column_metadata">get_column_metadata()</h2>
+<p><code>get_column_metadata(board_id, column_ids)</code></p>
+<p><strong>Description:</strong>
+Retrieves metadata for specific columns on a board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+<li><code>column_ids</code> <em>(list)</em>: A list of column IDs to retrieve metadata for.</li>
+</ul>
+<p><strong>Returns:</strong>
+A list of dictionaries containing metadata for the specified columns. <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">column_metadata</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_column_metadata</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">])</span>
+</code></pre></div>
+<hr />
+<h2 id="change_column_values">change_column_values()</h2>
+<p><code>change_column_values(board_id, item_id, column_dict)</code></p>
+<p><strong>Description:</strong>
+Updates multiple column values of an item.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+<li><code>item_id</code> <em>(int)</em>: The ID of the item.</li>
+<li><code>column_dict</code> <em>(dict)</em>: A dictionary containing column IDs, types, and their new values (refer to <strong>Column Types</strong>).</li>
+</ul>
+<p><strong>Returns:</strong>
+The updated item's ID. <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">column_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;text1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Updated Text&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;status2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Done&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;date3&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2024-06-15&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;rating4&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">]},</span>
+    <span class="s2">&quot;week5&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;week&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2019-06-10&quot;</span><span class="p">,</span> <span class="s2">&quot;2019-06-16&quot;</span><span class="p">]},</span>
+    <span class="s2">&quot;location6&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;29.9772962&quot;</span><span class="p">,</span> <span class="s2">&quot;31.1324955&quot;</span><span class="p">,</span> <span class="s2">&quot;Giza Pyramid Complex&quot;</span><span class="p">]}</span>
+<span class="p">}</span>
+<span class="n">updated_item</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">change_column_values</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="mi">987654321</span><span class="p">,</span> <span class="n">column_dict</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="create_column">create_column()</h2>
+<p><code>create_column(board_id, title, column_type)</code></p>
+<p><strong>Description:</strong>
+Creates a new column in a board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+<li><code>title</code> <em>(str)</em>: The title of the new column.</li>
+<li><code>column_type</code> <em>(str)</em>: The type of column to create (e.g., <code>text</code>, <code>date</code>).</li>
+</ul>
+<p><strong>Returns:</strong>
+The newly created column's ID. <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">new_column_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">create_column</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="s2">&quot;Priority&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="change_column_title">change_column_title()</h2>
+<p><code>change_column_title(board_id, column_id, new_title)</code></p>
+<p><strong>Description:</strong>
+Updates the title of a column.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+<li><code>column_id</code> <em>(str)</em>: The ID of the column to update.</li>
+<li><code>new_title</code> <em>(str)</em>: The new title for the column.</li>
+</ul>
+<p><strong>Returns:</strong>
+The updated column's ID. <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">updated_column</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">change_column_title</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;Progress&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="clear_column">clear_column()</h2>
+<p><code>clear_column(board_id, item_id, column_id)</code></p>
+<p><strong>Description:</strong>
+Clears the value of a column based on its type.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+<li><code>item_id</code> <em>(int)</em>: The ID of the item.</li>
+<li><code>column_id</code> <em>(str)</em>: The ID of the column to clear.</li>
+</ul>
+<p><strong>Returns:</strong>
+The updated item's ID. <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">cleared_item</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">clear_column</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="mi">987654321</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">)</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1.103%20Boards/" class="btn btn-neutral float-left" title="Boards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.105%20Doc%20Blocks/" class="btn btn-neutral float-right" title="Doc Blocks">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../1.103%20Boards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../1.105%20Doc%20Blocks/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

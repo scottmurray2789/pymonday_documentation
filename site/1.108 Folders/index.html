@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Subitems - Pymonday</title>
+    <title>Folders - Pymonday</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Subitems";
-        var mkdocs_page_input_path = "1.112 Subitems.md";
+        var mkdocs_page_name = "Folders";
+        var mkdocs_page_input_path = "1.108 Folders.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -63,7 +63,19 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.107%20Files/">Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1.108%20Folders/">Folders</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Folders</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_folders">get_folders()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_folder">create_folder()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update_folder">update_folder()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete_folder">delete_folder()</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.109%20Groups/">Groups</a>
                   </li>
@@ -71,19 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Subitems</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitems">get_subitems()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_names">get_subitem_names()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_info">get_subitem_info()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#create_subitem">create_subitem()</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
                   </li>
@@ -111,7 +111,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Reference</li>
-      <li class="breadcrumb-item active">Subitems</li>
+      <li class="breadcrumb-item active">Folders</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -120,7 +120,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="subitem-methods">Subitem Methods</h1>
+                <h1 id="folders-methods">Folders Methods</h1>
 <table>
 <thead>
 <tr>
@@ -131,100 +131,98 @@
 </thead>
 <tbody>
 <tr>
-<td><code>get_subitems(item_id)</code></td>
+<td><code>get_folders(workspace_id)</code></td>
 <td>Getter</td>
-<td>Retrieves the UUIDs of the subitems of an item.</td>
+<td>Retrieves all folders in a workspace.</td>
 </tr>
 <tr>
-<td><code>get_subitem_names(item_id)</code></td>
-<td>Getter</td>
-<td>Retrieves the UUIDs and names of an item's subitems.</td>
-</tr>
-<tr>
-<td><code>get_subitem_info(sub_item_id)</code></td>
-<td>Getter</td>
-<td>Retrieves the board ID and parent ID of a subitem.</td>
-</tr>
-<tr>
-<td><code>create_subitem(parent_id, item_name, column_dictionary)</code></td>
+<td><code>create_folder(name, workspace_id, **kwargs)</code></td>
 <td>Setter</td>
-<td>Creates a new subitem under a parent item.</td>
+<td>Creates a new folder in a workspace.</td>
+</tr>
+<tr>
+<td><code>update_folder(folder_id, **kwargs)</code></td>
+<td>Setter</td>
+<td>Updates an existing folder in a workspace.</td>
+</tr>
+<tr>
+<td><code>delete_folder(folder_id)</code></td>
+<td>Deleter</td>
+<td>Deletes a folder from a workspace.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="method-details">Method Details</h2>
-<h2 id="get_subitems">get_subitems()</h2>
-<p><code>get_subitems(item_id)</code></p>
+<h2 id="get_folders">get_folders()</h2>
+<p><code>get_folders(workspace_id)</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs of the subitems of an item.</p>
+Retrieves all folders in a workspace.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
+<li><code>workspace_id</code> <em>(str)</em>: The UUID of the workspace.</li>
 </ul>
 <p><strong>Returns:</strong>
-Array of subitem IDs. <code>None</code> or error message on API call failure.</p>
+Array of dictionaries containing folder data. Returns <code>None</code> or an error message on API call failure.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitems</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitems</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">folders</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">folders</span><span class="o">.</span><span class="n">get_folders</span><span class="p">(</span><span class="s2">&quot;workspace_uuid&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_names">get_subitem_names()</h2>
-<p><code>get_subitem_names(item_id)</code></p>
+<h2 id="create_folder">create_folder()</h2>
+<p><code>create_folder(name, workspace_id, **kwargs)</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs and names of an item's subitems.</p>
+Creates a new folder in a workspace.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
+<li><code>name</code> <em>(str)</em>: The name of the folder (required).</li>
+<li><code>workspace_id</code> <em>(str)</em>: The unique identifier of the workspace (required).</li>
+<li><code>color</code> <em>(str, optional)</em>: The folder's color.</li>
+<li><code>parent_folder_id</code> <em>(str, optional)</em>: The ID of the folder to nest the new folder under (limited to 1 tier).</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary of subitem IDs and names. <code>None</code> or error message on API call failure.</p>
+UUID of the newly created folder. Returns <code>None</code> or an error message on API call failure.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_names</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_names</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">folder_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">folders</span><span class="o">.</span><span class="n">create_folder</span><span class="p">(</span><span class="s2">&quot;Project Docs&quot;</span><span class="p">,</span> <span class="s2">&quot;workspace_uuid&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FF5733&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_info">get_subitem_info()</h2>
-<p><code>get_subitem_info(sub_item_id)</code></p>
+<h2 id="update_folder">update_folder()</h2>
+<p><code>update_folder(folder_id, **kwargs)</code></p>
 <p><strong>Description:</strong>
-Retrieves the board ID and parent ID of a subitem.</p>
+Updates an existing folder in a workspace.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>sub_item_id</strong> <em>(int)</em>: UUID of the subitem.</li>
+<li><code>folder_id</code> <em>(str)</em>: The UUID of the folder to update (required).</li>
+<li><code>**kwargs</code>: Keywords must be passed exactly as defined below. Folder colors can be found here:
+        https://asset.cloudinary.com/monday-platform-dev/3e39afb2309b512f4f53cc9173554d48</li>
+<li><code>name</code> <em>(str, optional)</em>: Updated name of the folder.</li>
+<li><code>color</code> <em>(str, optional)</em>: Updated folder color.</li>
+<li><code>parent_folder_id</code> <em>(str, optional)</em>: The ID of the folder to nest the updated folder under.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the parent ID and board ID of the subitem. <code>None</code> or error message on API call failure.</p>
+UUID of the updated folder. Returns <code>None</code> or an error message on API call failure.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_info</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_info</span><span class="p">(</span><span class="mi">987654321</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">updated_folder_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">folders</span><span class="o">.</span><span class="n">update_folder</span><span class="p">(</span><span class="mi">12345</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Updated Folder Name&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="create_subitem">create_subitem()</h2>
-<p><code>create_subitem(parent_id, item_name, column_dictionary)</code></p>
+<h2 id="delete_folder">delete_folder()</h2>
+<p><code>delete_folder(folder_id)</code></p>
 <p><strong>Description:</strong>
-Creates a new subitem under a parent item.</p>
+Deletes a folder from a workspace.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>parent_id</strong> <em>(int)</em>: UUID of the item to create the subitem under.</li>
-<li><strong>item_name</strong> <em>(str)</em>: Name of the new subitem.</li>
-<li><strong>column_dictionary</strong> <em>(dict)</em>: Dictionary containing column IDs, column types, and values 
-(refer to <strong>Column Types</strong> in the <strong>Columns</strong> section).</li>
+<li><code>folder_id</code> <em>(str)</em>: The UUID of the folder to delete.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the newly created subitem ID and the board ID on which the subitem was created. 
-<code>None</code> or error message on API call failure.</p>
+<code>True</code> if successful. Returns <code>None</code> or an error message on API call failure.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">col_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;text1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Review documents&quot;</span><span class="p">]},</span>
-    <span class="s2">&quot;status1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pending&quot;</span><span class="p">]}</span>
-<span class="p">}</span>
-<span class="n">new_subitem</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">create_subitem</span><span class="p">(</span><span class="n">parent_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
-                                             <span class="n">item_name</span><span class="o">=</span><span class="s2">&quot;New Subitem&quot;</span><span class="p">,</span> 
-                                             <span class="n">column_dictionary</span><span class="o">=</span><span class="n">col_dict</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">deleted</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">folders</span><span class="o">.</span><span class="n">delete_folder</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
 </code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1.111%20Notifications/" class="btn btn-neutral float-left" title="Notifications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../1.113%20Tags/" class="btn btn-neutral float-right" title="Tags">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../1.107%20Files/" class="btn btn-neutral float-left" title="Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.109%20Groups/" class="btn btn-neutral float-right" title="Groups">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -247,10 +245,10 @@ Dictionary containing the newly created subitem ID and the board ID on which the
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1.111%20Notifications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../1.107%20Files/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../1.113%20Tags/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../1.109%20Groups/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Methods - Pymonday</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Methods";
+        var mkdocs_page_input_path = "Method Overview.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Pymonday
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Client</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Methods</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.101%20Account/">Account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.102%20Activity%20Logs/">Activity Logs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.103%20Boards/">Boards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.104%20Columns/">Columns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.105%20Doc%20Blocks/">Doc Blocks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.106%20Docs/">Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.107%20Files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.108%20Folders/">Folders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.109%20Groups/">Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.110%20Items/">Items</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.114%20Teams/">Teams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.117%20Workspaces/">Workspaces</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Pymonday</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Overview</li>
+      <li class="breadcrumb-item active">Methods</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="pymonday-client-method-overview">PyMonday Client Method Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Method Name</th>
+<th>Method Type</th>
+<th>Category</th>
+<th>Created in Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>BaseClient</em></td>
+<td>__async_post</td>
+<td>Private</td>
+<td>-</td>
+<td>v2 (updated in v3)</td>
+</tr>
+<tr>
+<td><em>BaseClient</em></td>
+<td>__column_task_handler</td>
+<td>Private</td>
+<td>-</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><em>BaseClient</em></td>
+<td>__get_next_page</td>
+<td>Private</td>
+<td>-</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><em>BaseClient</em></td>
+<td>__send_post_request</td>
+<td>Private</td>
+<td>-</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><em>BaseClient</em></td>
+<td>__upload_file</td>
+<td>Private</td>
+<td>-</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Account</strong></td>
+<td>get_account_details</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Activity Log</strong></td>
+<td>get_activity_logs</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>get_all_boards</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>get_board_info</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>get_board_groups</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>get_board_from_item</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>get_board_views</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>create_board</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>update_board_description</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>archive_board</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>duplicate_board</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Boards</strong></td>
+<td>delete_board</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>get_column_metadata</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>column_id_formatter</td>
+<td>Static</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>create_column</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>change_column_values</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>change_column_title</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Columns</strong></td>
+<td>clear_column</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Doc Blocks</strong></td>
+<td>fetch_doc_blocks</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Doc Blocks</strong></td>
+<td>create_doc_block</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Doc Blocks</strong></td>
+<td>update_doc_block</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Doc Blocks</strong></td>
+<td>delete_doc_block</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Docs</strong></td>
+<td>fetch_docs</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Docs</strong></td>
+<td>create_doc</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Files</strong></td>
+<td>get_assets</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Files</strong></td>
+<td>upload_file_to_column</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Files</strong></td>
+<td>add_file_to_update</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Folders</strong></td>
+<td>get_folders</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Folders</strong></td>
+<td>create_folder</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Folders</strong></td>
+<td>update_folder</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Folders</strong></td>
+<td>delete_folder</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>create_group</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>move_item_to_group</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>update_group</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>duplicate_group</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>is_group_empty</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>archive_group</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td>delete_group</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_item_ids_from_group</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_page_from_group</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_from_column</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_with_status</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_page_between_dates</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_page_between_date</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_item_ids_between_dates</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_item_ids_between_date</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_item_columns</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>get_items_by_column_values</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>create_item</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>create_item_with_column_values</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>archive_item</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>duplicate_item</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>move_item_to_board</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Items</strong></td>
+<td>delete_item</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>create_notification</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Subitems</strong></td>
+<td>get_subitems</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Subitems</strong></td>
+<td>get_subitem_names</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Subitems</strong></td>
+<td>get_subitem_info</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Subitems</strong></td>
+<td>create_subitem</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td>create_or_get_tag</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Teams</strong></td>
+<td>get_teams</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Teams</strong></td>
+<td>get_team_members</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>get_item_updates</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>create_update</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>create_reply</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>clear_updates</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>delete_update</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td>get_all_users</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td>get_user_info</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td>add_user_to_board</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td>remove_user_from_board</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>get_workspaces</td>
+<td>Public</td>
+<td>Getter</td>
+<td>v2</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>create_workspace</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>add_users_to_workspace</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>add_teams_to_workspace</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>update_workspace</td>
+<td>Public</td>
+<td>Setter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>delete_workspace</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>delete_users_from_workspace</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+<tr>
+<td><strong>Workspaces</strong></td>
+<td>delete_teams_from_workspace</td>
+<td>Public</td>
+<td>Deleter</td>
+<td>v3</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Client"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.101%20Account/" class="btn btn-neutral float-right" title="Account">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../1.101%20Account/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

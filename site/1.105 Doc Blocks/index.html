@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Doc Blocks - Pymonday</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Doc Blocks";
+        var mkdocs_page_input_path = "1.105 Doc Blocks.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Pymonday
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20Overview/">Methods</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1.101%20Account/">Account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.102%20Activity%20Logs/">Activity Logs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.103%20Boards/">Boards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.104%20Columns/">Columns</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Doc Blocks</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fetch_doc_blocks">fetch_doc_blocks()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_doc_block">create_doc_block()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update_doc_block">update_doc_block()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete_doc_block">delete_doc_block()</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.106%20Docs/">Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.107%20Files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.108%20Folders/">Folders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.109%20Groups/">Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.110%20Items/">Items</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.114%20Teams/">Teams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.117%20Workspaces/">Workspaces</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Pymonday</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Doc Blocks</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="doc-blocks-methods">Doc Blocks Methods</h1>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Method Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fetch_doc_blocks(doc_id, limit, page)</code></td>
+<td>Getter</td>
+<td>Retrieves metadata for all blocks in a document.</td>
+</tr>
+<tr>
+<td><code>create_doc_block(doc_id, block_type, content, after_block_id)</code></td>
+<td>Setter</td>
+<td>Creates a new block in a document.</td>
+</tr>
+<tr>
+<td><code>update_doc_block(block_id, content)</code></td>
+<td>Setter</td>
+<td>Updates the content of an existing block.</td>
+</tr>
+<tr>
+<td><code>delete_doc_block(block_id)</code></td>
+<td>Deleter</td>
+<td>Deletes a block from a document.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="method-details">Method Details</h2>
+<h2 id="fetch_doc_blocks">fetch_doc_blocks()</h2>
+<p><code>fetch_doc_blocks(doc_id, limit, page)</code></p>
+<p><strong>Description:</strong>
+Retrieves metadata for all blocks within a specific document.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>doc_id</code> <em>(int)</em>: ID of the document.</li>
+<li><code>limit</code> <em>(int, optional)</em>: Number of blocks to retrieve per request (default: 50, max: 100).</li>
+<li><code>page</code> <em>(int, optional)</em>: Page number to fetch (default: 1).</li>
+</ul>
+<p><strong>Returns:</strong>
+JSON response containing block details. None or error message on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">blocks</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">doc_blocks</span><span class="o">.</span><span class="n">fetch_doc_blocks</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="create_doc_block">create_doc_block()</h2>
+<p><code>create_doc_block(doc_id, block_type, content, after_block_id)</code></p>
+<p><strong>Description:</strong>
+Creates a new block within a specific document.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>doc_id</code> <em>(int)</em>: ID of the document.</li>
+<li><code>block_type</code> <em>(str)</em>: Type of block (e.g., <code>'normal_text'</code>, <code>'table'</code>).</li>
+<li><code>content</code> <em>(str or dict)</em>: JSON-formatted string or dictionary representing the block content (required) (for content 
+field information check https://developer.monday.com/api-reference/reference/blocks).</li>
+<li><code>after_block_id</code> <em>(int, optional)</em>: ID of the block that will be above the new block.</li>
+</ul>
+<p><strong>Returns:</strong>
+Created block's ID. None or error message on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">new_block</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">doc_blocks</span><span class="o">.</span><span class="n">create_doc_block</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> 
+                                               <span class="s1">&#39;normal_text&#39;</span><span class="p">,</span> 
+                                               <span class="p">{</span>
+                                                   <span class="s2">&quot;alignment&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> 
+                                                   <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;ltr&quot;</span><span class="p">,</span> 
+                                                   <span class="s2">&quot;deltaFormat&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;insert&quot;</span><span class="p">:</span> <span class="s2">&quot;This is an example of a text block.&quot;</span><span class="p">}]</span>
+                                               <span class="p">})</span>
+</code></pre></div>
+<hr />
+<h2 id="update_doc_block">update_doc_block()</h2>
+<p><code>update_doc_block(block_id, content)</code></p>
+<p><strong>Description:</strong>
+Updates the content of an existing block.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>block_id</code> <em>(int)</em>: ID of the block to update.</li>
+<li><code>content</code> <em>(str or dict)</em>: New content for the block. Must be a valid JSON object or string (required)
+        (for content field information check https://developer.monday.com/api-reference/reference/blocks).</li>
+</ul>
+<p><strong>Returns:</strong>
+Updated block's ID. None or error message on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">updated_block</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">doc_blocks</span><span class="o">.</span><span class="n">update_doc_block</span><span class="p">(</span><span class="s2">&quot;doc-block-id12345&quot;</span><span class="p">,</span> 
+                                                   <span class="p">{</span>
+                                                       <span class="s2">&quot;alignment&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> 
+                                                       <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;ltr&quot;</span><span class="p">,</span> 
+                                                       <span class="s2">&quot;deltaFormat&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;insert&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATED block.&quot;</span><span class="p">}]</span>
+                                                   <span class="p">})</span>
+</code></pre></div>
+<hr />
+<h2 id="delete_doc_block">delete_doc_block()</h2>
+<p><code>delete_doc_block(block_id)</code></p>
+<p><strong>Description:</strong>
+Deletes a block from a document.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>block_id</code> <em>(int)</em>: ID of the block to delete.</li>
+</ul>
+<p><strong>Returns:</strong>
+True if successful. None or error message on API call failure.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">deleted</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">doc_blocks</span><span class="o">.</span><span class="n">delete_doc_block</span><span class="p">(</span><span class="s2">&quot;doc-block-id12345&quot;</span><span class="p">)</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1.104%20Columns/" class="btn btn-neutral float-left" title="Columns"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.106%20Docs/" class="btn btn-neutral float-right" title="Docs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../1.104%20Columns/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../1.106%20Docs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

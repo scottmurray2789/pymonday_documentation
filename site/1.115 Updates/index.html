@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Subitems - Pymonday</title>
+    <title>Updates - Pymonday</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Subitems";
-        var mkdocs_page_input_path = "1.112 Subitems.md";
+        var mkdocs_page_name = "Updates";
+        var mkdocs_page_input_path = "1.115 Updates.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -71,25 +71,27 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Subitems</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitems">get_subitems()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_names">get_subitem_names()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get_subitem_info">get_subitem_info()</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#create_subitem">create_subitem()</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.114%20Teams/">Teams</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Updates</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_item_updates">get_item_updates()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_update">create_update()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_reply">create_reply()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete_update">delete_update()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clear_updates">clear_updates()</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
                   </li>
@@ -111,7 +113,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Reference</li>
-      <li class="breadcrumb-item active">Subitems</li>
+      <li class="breadcrumb-item active">Updates</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -120,7 +122,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="subitem-methods">Subitem Methods</h1>
+                <h1 id="updates-methods">Updates Methods</h1>
 <table>
 <thead>
 <tr>
@@ -131,100 +133,115 @@
 </thead>
 <tbody>
 <tr>
-<td><code>get_subitems(item_id)</code></td>
+<td><code>get_item_updates(item_id)</code></td>
 <td>Getter</td>
-<td>Retrieves the UUIDs of the subitems of an item.</td>
+<td>Retrieves all updates from an item.</td>
 </tr>
 <tr>
-<td><code>get_subitem_names(item_id)</code></td>
-<td>Getter</td>
-<td>Retrieves the UUIDs and names of an item's subitems.</td>
-</tr>
-<tr>
-<td><code>get_subitem_info(sub_item_id)</code></td>
-<td>Getter</td>
-<td>Retrieves the board ID and parent ID of a subitem.</td>
-</tr>
-<tr>
-<td><code>create_subitem(parent_id, item_name, column_dictionary)</code></td>
+<td><code>create_update(item_id, update_text)</code></td>
 <td>Setter</td>
-<td>Creates a new subitem under a parent item.</td>
+<td>Creates an update on an item.</td>
+</tr>
+<tr>
+<td><code>create_reply(item_id, update_text, parent_id)</code></td>
+<td>Setter</td>
+<td>Creates a reply to an existing update.</td>
+</tr>
+<tr>
+<td><code>delete_update(update_id)</code></td>
+<td>Deleter</td>
+<td>Deletes an update on an item.</td>
+</tr>
+<tr>
+<td><code>clear_updates(item_id)</code></td>
+<td>Deleter</td>
+<td>Clears all updates from an item.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="method-details">Method Details</h2>
-<h2 id="get_subitems">get_subitems()</h2>
-<p><code>get_subitems(item_id)</code></p>
+<h2 id="get_item_updates">get_item_updates()</h2>
+<p><code>get_item_updates(item_id)</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs of the subitems of an item.</p>
+Retrieves all updates from an item.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
+<li><strong>item_id</strong> <em>(int)</em>: ID of the item to fetch updates from.</li>
 </ul>
 <p><strong>Returns:</strong>
-Array of subitem IDs. <code>None</code> or error message on API call failure.</p>
+List of updates containing update text, timestamps, creator ID, replies, and assets. Returns <code>None</code> or an error message 
+if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitems</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitems</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">updates</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">updates</span><span class="o">.</span><span class="n">get_item_updates</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_names">get_subitem_names()</h2>
-<p><code>get_subitem_names(item_id)</code></p>
+<h2 id="create_update">create_update()</h2>
+<p><code>create_update(item_id, update_text)</code></p>
 <p><strong>Description:</strong>
-Retrieves the UUIDs and names of an item's subitems.</p>
+Creates an update on an item.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>item_id</strong> <em>(int)</em>: UUID of the parent item.</li>
+<li><strong>item_id</strong> <em>(int)</em>: ID of the item to post the update on.</li>
+<li><strong>update_text</strong> <em>(str)</em>: The text content of the update.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary of subitem IDs and names. <code>None</code> or error message on API call failure.</p>
+The ID of the newly created update. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_names</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_names</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">update_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">updates</span><span class="o">.</span><span class="n">create_update</span><span class="p">(</span><span class="mi">123456789</span><span class="p">,</span> <span class="s2">&quot;This is an update.&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="get_subitem_info">get_subitem_info()</h2>
-<p><code>get_subitem_info(sub_item_id)</code></p>
+<h2 id="create_reply">create_reply()</h2>
+<p><code>create_reply(item_id, update_text, parent_id)</code></p>
 <p><strong>Description:</strong>
-Retrieves the board ID and parent ID of a subitem.</p>
+Creates a reply to an existing update.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>sub_item_id</strong> <em>(int)</em>: UUID of the subitem.</li>
+<li><strong>item_id</strong> <em>(int)</em>: ID of the item where the update exists.</li>
+<li><strong>update_text</strong> <em>(str)</em>: The text content of the reply.</li>
+<li><strong>parent_id</strong> <em>(int)</em>: ID of the update being replied to.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the parent ID and board ID of the subitem. <code>None</code> or error message on API call failure.</p>
+The ID of the newly created reply. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">subitem_info</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">get_subitem_info</span><span class="p">(</span><span class="mi">987654321</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">reply_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">updates</span><span class="o">.</span><span class="n">create_reply</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
+                                       <span class="n">update_text</span><span class="o">=</span><span class="s2">&quot;This is a reply&quot;</span><span class="p">,</span> 
+                                       <span class="n">parent_id</span><span class="o">=</span><span class="mi">987654321</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="create_subitem">create_subitem()</h2>
-<p><code>create_subitem(parent_id, item_name, column_dictionary)</code></p>
+<h2 id="delete_update">delete_update()</h2>
+<p><code>delete_update(update_id)</code></p>
 <p><strong>Description:</strong>
-Creates a new subitem under a parent item.</p>
+Deletes an update on an item.</p>
 <p><strong>Arguments:</strong></p>
 <ul>
-<li><strong>parent_id</strong> <em>(int)</em>: UUID of the item to create the subitem under.</li>
-<li><strong>item_name</strong> <em>(str)</em>: Name of the new subitem.</li>
-<li><strong>column_dictionary</strong> <em>(dict)</em>: Dictionary containing column IDs, column types, and values 
-(refer to <strong>Column Types</strong> in the <strong>Columns</strong> section).</li>
+<li><strong>update_id</strong> <em>(int)</em>: ID of the update to delete.</li>
 </ul>
 <p><strong>Returns:</strong>
-Dictionary containing the newly created subitem ID and the board ID on which the subitem was created. 
-<code>None</code> or error message on API call failure.</p>
+<code>True</code> if the update was deleted successfully. Returns <code>None</code> or an error message if the request fails.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">col_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;text1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Review documents&quot;</span><span class="p">]},</span>
-    <span class="s2">&quot;status1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pending&quot;</span><span class="p">]}</span>
-<span class="p">}</span>
-<span class="n">new_subitem</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">subitems</span><span class="o">.</span><span class="n">create_subitem</span><span class="p">(</span><span class="n">parent_id</span><span class="o">=</span><span class="mi">123456789</span><span class="p">,</span> 
-                                             <span class="n">item_name</span><span class="o">=</span><span class="s2">&quot;New Subitem&quot;</span><span class="p">,</span> 
-                                             <span class="n">column_dictionary</span><span class="o">=</span><span class="n">col_dict</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">success</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">updates</span><span class="o">.</span><span class="n">delete_update</span><span class="p">(</span><span class="mi">987654321</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="clear_updates">clear_updates()</h2>
+<p><code>clear_updates(item_id)</code></p>
+<p><strong>Description:</strong>
+Clears all updates from an item.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><strong>item_id</strong> <em>(int)</em>: ID of the item to clear updates from.</li>
+</ul>
+<p><strong>Returns:</strong>
+<code>True</code> if all updates were cleared successfully. Returns <code>None</code> or an error message if the request fails.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">success</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">updates</span><span class="o">.</span><span class="n">clear_updates</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
 </code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1.111%20Notifications/" class="btn btn-neutral float-left" title="Notifications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../1.113%20Tags/" class="btn btn-neutral float-right" title="Tags">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../1.114%20Teams/" class="btn btn-neutral float-left" title="Teams"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.116%20Users/" class="btn btn-neutral float-right" title="Users">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -247,10 +264,10 @@ Dictionary containing the newly created subitem ID and the board ID on which the
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../1.111%20Notifications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../1.114%20Teams/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../1.113%20Tags/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../1.116%20Users/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

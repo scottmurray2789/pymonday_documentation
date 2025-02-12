@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Boards - Pymonday</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Boards";
+        var mkdocs_page_input_path = "1.103 Boards.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Pymonday
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20Overview/">Methods</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1.101%20Account/">Account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.102%20Activity%20Logs/">Activity Logs</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Boards</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#method-details">Method Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_all_boards">get_all_boards()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_board_info">get_board_info()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_board_groups">get_board_groups()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_board_from_item">get_board_from_item()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get_board_views">get_board_views()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create_board">create_board()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update_board_description">update_board_description()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#duplicate_board">duplicate_board()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete_board">delete_board()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#archive_board">archive_board()</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.104%20Columns/">Columns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.105%20Doc%20Blocks/">Doc Blocks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.106%20Docs/">Docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.107%20Files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.108%20Folders/">Folders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.109%20Groups/">Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.110%20Items/">Items</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.111%20Notifications/">Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.112%20Subitems/">Subitems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.113%20Tags/">Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.114%20Teams/">Teams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.115%20Updates/">Updates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.116%20Users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.117%20Workspaces/">Workspaces</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Pymonday</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Boards</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="boards-methods">Boards Methods</h1>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Method Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_all_boards()</code></td>
+<td>Getter</td>
+<td>Retrieves all boards from the platform.</td>
+</tr>
+<tr>
+<td><code>get_board_info(board_id)</code></td>
+<td>Getter</td>
+<td>Retrieves details of a specific board, including name, state, permissions, type, and workspace.</td>
+</tr>
+<tr>
+<td><code>get_board_groups(board_id)</code></td>
+<td>Getter</td>
+<td>Retrieves all groups within a specified board.</td>
+</tr>
+<tr>
+<td><code>get_board_from_item(item_id)</code></td>
+<td>Getter</td>
+<td>Retrieves the board ID for a given item.</td>
+</tr>
+<tr>
+<td><code>get_board_views(board_id)</code></td>
+<td>Getter</td>
+<td>Retrieves all views associated with a board.</td>
+</tr>
+<tr>
+<td><code>create_board(board_name, board_type, workspace_id)</code></td>
+<td>Setter</td>
+<td>Creates a new board in a specified workspace.</td>
+</tr>
+<tr>
+<td><code>update_board_description(board_id, description)</code></td>
+<td>Setter</td>
+<td>Updates the description of a board.</td>
+</tr>
+<tr>
+<td><code>duplicate_board(board_id, duplicate_type, board_name, keep_subscribers, workspace_id, folder_id)</code></td>
+<td>Setter</td>
+<td>Duplicates an existing board with optional parameters for structure, pulses, updates, and new workspace location.</td>
+</tr>
+<tr>
+<td><code>delete_board(board_id)</code></td>
+<td>Deleter</td>
+<td>Deletes a specified board.</td>
+</tr>
+<tr>
+<td><code>archive_board(board_id)</code></td>
+<td>Deleter</td>
+<td>Archives a board instead of deleting it.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="method-details">Method Details</h2>
+<h2 id="get_all_boards">get_all_boards()</h2>
+<p><code>get_all_boards()</code></p>
+<p><strong>Description:</strong> 
+Retrieves all boards from the platform.</p>
+<p><strong>Returns:</strong>
+A dictionary containing board IDs and names, <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">boards</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">get_all_boards</span><span class="p">()</span>
+</code></pre></div></p>
+<hr />
+<h2 id="get_board_info">get_board_info()</h2>
+<p><code>get_board_info(board_id)</code></p>
+<p><strong>Description:</strong> Retrieves details of a board, including its name, state, permissions, type, and workspace ID.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+</ul>
+<p><strong>Returns:</strong>
+A dictionary containing board details. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">board_info</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">get_board_info</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="get_board_groups">get_board_groups()</h2>
+<p><code>get_board_groups(board_id)</code></p>
+<p><strong>Description:</strong>
+Retrieves all groups within a specific board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+</ul>
+<p><strong>Returns:</strong>
+A dictionary containing group IDs and names. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">groups</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">get_board_groups</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="get_board_from_item">get_board_from_item()</h2>
+<p><code>get_board_from_item(item_id)</code></p>
+<p><strong>Description:</strong>
+Retrieves the board ID where a specific item is located.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>item_id</code> <em>(int)</em>: The ID of the item.</li>
+</ul>
+<p><strong>Returns:</strong>
+A dictionary containing the board ID and name. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">board</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">get_board_from_item</span><span class="p">(</span><span class="mi">987654321</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="get_board_views">get_board_views()</h2>
+<p><code>get_board_views(board_id)</code></p>
+<p><strong>Description:</strong>
+Retrieves all views associated with a board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board.</li>
+</ul>
+<p><strong>Returns:</strong>
+A list of views. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">views</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">get_board_views</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="create_board">create_board()</h2>
+<p><code>create_board(board_name, board_type, workspace_id)</code></p>
+<p><strong>Description:</strong>
+Creates a new board in a specified workspace.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_name</code> <em>(str)</em>: The name of the board.</li>
+<li><code>board_type</code> <em>(str)</em>: The board's visibility (<code>public</code>, <code>private</code>, or <code>share</code>).</li>
+<li><code>workspace_id</code> <em>(int)</em>: The ID of the workspace where the board should be created.</li>
+</ul>
+<p><strong>Returns:</strong>
+The newly created board's ID. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">new_board_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">create_board</span><span class="p">(</span><span class="s2">&quot;Project Board&quot;</span><span class="p">,</span> <span class="s2">&quot;private&quot;</span><span class="p">,</span> <span class="mi">11223344</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="update_board_description">update_board_description()</h2>
+<p><code>update_board_description(board_id, description)</code></p>
+<p><strong>Description:</strong>
+Updates the description of a board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board to update.</li>
+<li><code>description</code> <em>(str)</em>: The new description text.</li>
+</ul>
+<p><strong>Returns:</strong>
+The response from the API, <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">update_board_description</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="s2">&quot;Updated board description&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="duplicate_board">duplicate_board()</h2>
+<p><code>duplicate_board(board_id, duplicate_type, board_name, keep_subscribers, workspace_id, folder_id)</code></p>
+<p><strong>Description:</strong> 
+Duplicates a board with various options.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board to duplicate.</li>
+<li><code>duplicate_type</code> <em>(str)</em>: The duplication type (<code>duplicate_board_with_structure</code>, <code>duplicate_board_with_pulses</code>, <code>duplicate_board_with_pulses_and_updates</code>).</li>
+<li><code>board_name</code> <em>(str, optional)</em>: New name for the duplicated board.</li>
+<li><code>keep_subscribers</code> <em>(bool, optional)</em>: Whether to duplicate the board subscribers.</li>
+<li><code>workspace_id</code> <em>(int, optional)</em>: The workspace ID where the duplicated board should be placed.</li>
+<li><code>folder_id</code> <em>(int, optional)</em>: The folder ID within the workspace (if applicable).</li>
+</ul>
+<p><strong>Returns:</strong>
+The new board ID. <code>None</code> an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">duplicated_board_id</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">duplicate_board</span><span class="p">(</span><span class="n">board_id</span><span class="o">=</span><span class="mi">1234567890</span><span class="p">,</span> <span class="n">duplicate_type</span><span class="o">=</span><span class="s2">&quot;duplicate_board_with_pulses&quot;</span><span class="p">,</span> <span class="n">board_name</span><span class="o">=</span><span class="s2">&quot;Duplicated Board&quot;</span><span class="p">,</span> <span class="n">keep_subscribers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">workspace_id</span><span class="o">=</span><span class="mi">11223344</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="delete_board">delete_board()</h2>
+<p><code>delete_board(board_id)</code></p>
+<p><strong>Description:</strong>
+Deletes a specified board.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board to be deleted.</li>
+</ul>
+<p><strong>Returns:</strong>
+<code>True</code> if deletion is successful. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">is_deleted</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">delete_board</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="archive_board">archive_board()</h2>
+<p><code>archive_board(board_id)</code></p>
+<p><strong>Description:</strong>
+Archives a board instead of deleting it.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>board_id</code> <em>(int)</em>: The ID of the board to archive.</li>
+</ul>
+<p><strong>Returns:</strong>
+<code>True</code> if archiving is successful. <code>None</code> or an error message if the API call fails.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">is_archived</span> <span class="o">=</span> <span class="n">monday</span><span class="o">.</span><span class="n">boards</span><span class="o">.</span><span class="n">archive_board</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</code></pre></div></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1.102%20Activity%20Logs/" class="btn btn-neutral float-left" title="Activity Logs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../1.104%20Columns/" class="btn btn-neutral float-right" title="Columns">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../1.102%20Activity%20Logs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../1.104%20Columns/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

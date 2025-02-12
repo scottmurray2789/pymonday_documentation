@@ -1,0 +1,9 @@
+/* Fix table margin */
+table {
+    margin: 1em; /* Corrected syntax */
+}
+
+/* Expand content width for readthedocs theme */
+.wy-nav-content {
+    max-width: 100% !important;
+}

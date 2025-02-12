@@ -1,6 +1,6 @@
 site_name: Pymonday
 
-theme: ivory
+theme: readthedocs
 
 extra_css:
   - theme_overrides.css
@@ -9,6 +9,35 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+extra_css:
+  - css/custom.css
+
+
+nav:
+  - Overview:
+    - Client: index.md
+    - Methods: Method Overview.md
+  - Reference:
+        - Account: 1.101 Account.md
+        - Activity Logs: 1.102 Activity Logs.md
+        - Boards: 1.103 Boards.md
+        - Columns: 1.104 Columns.md
+        - Doc Blocks: 1.105 Doc Blocks.md
+        - Docs: 1.106 Docs.md
+        - Files: 1.107 Files.md
+        - Folders: 1.108 Folders.md
+        - Groups: 1.109 Groups.md
+        - Items: 1.110 Items.md
+        - Notifications: 1.111 Notifications.md
+        - Subitems: 1.112 Subitems.md
+        - Tags: 1.113 Tags.md
+        - Teams: 1.114 Teams.md
+        - Updates: 1.115 Updates.md
+        - Users: 1.116 Users.md
+        - Workspaces: 1.117 Workspaces.md
+
+
 
 
 
